@@ -3,7 +3,7 @@
  
  ## Variables
  Variables associate a name to a value. In Swift, variables are declared with the `var` keyword. */
-var height = 6
+var height: Int = 6
 /*:
  We just declared a variable called `height` and set its initial value to `6`. Let's try changing that value:
  */
@@ -16,13 +16,14 @@ height
  Try declaring your own variables and changing their values in the space below:
  */
 // make some variables here!
+var myYeet: Float = 30
 
 //:The ability of variables to change is called _mutability_. Declaring a `var` with a value that never actually changes value will result in the Swift compiler giving you a yellow warning. For those values, you should use a _constant_ instead of a variable.
 /*:
  ## Constants
  Constants are _immutable_, and can not be changed. You can declare a constant using the keyword `let`:
  */
-let pi = 3.14  //Mmm, pi.
+let pi: Float = 3.14  //Mmm, pi.
 /*:
  - experiment:
  Suppose we want to bend the rules of mathematics by changing the value of pi. Try changing `pi` by uncommenting the following line. You can uncomment it by deleting the two forward slashes `//` at the beginning of the line.
@@ -32,12 +33,13 @@ let pi = 3.14  //Mmm, pi.
  Notice that you get an error on that line. This is because you cannot change the value of a constant. Click the error sign to see the following:
 - important: `Cannot assign to value: 'pi' is a 'let' constant`
  
- If you've declared a variable using `let`, you will not be able to change its value later on. To get rid of the error, comment the line again by adding `//` to the beginning of that line. You can do it quickly with the keyboard shortcut: ⌘ + / .
+ If you've declared a variable using `let`, you will not be able to change its value later on. To get rid of the error, comment the line again by adding `` to the beginning of that line. You can do it quickly with the keyboard shortcut: ⌘ + / .
 
  - experiment:
  Create some constants of your own in the space below.
  */
 // make some constants here!
+let myName: String = "John"
 
 /*:
  - note:
@@ -48,12 +50,12 @@ let pi = 3.14  //Mmm, pi.
  When naming variables and constants, Swift programmers use a convention called camelCase. Here's how you can follow it:
  */
 // Correct
-var yourHeight = 5
-let upcomingAppVersion = 1.1
+var yourHeight: Int = 5
+let upcomingAppVersion: Float = 1.1
 
 // Wrong
-var YourHeight = 6
-let Upcomingappversion = 1.1
+var YourHeight: Int = 6
+let Upcomingappversion: Float = 1.1
 /*:
  The rules are as follows:
  * Start the first word in the variable name with a lowercase letter.
@@ -88,22 +90,22 @@ let Upcomingappversion = 1.1
 
 
 // 1) Define a variable to hold the number of cars parked in a parking lot, there 4 cars parked at the moment.
-
+var numberOfCars: Int = 4
 
 
 
 // 2) Define variable that holds the number of units in a building on Market St. There 12 units in the building.
-
+let numberOfUnits: Int8 = 12
 
 
 
 // 3) Define a variable that will hold the high score in a game. The current value is 5000.
-
+var highScore: Int = 5000
 
 
 // 4) Define a variable that holds the number of letters in the alphabet.
-
-
+let numberOfLettersInEnglishAlphabet: Int8 = 26
+print(numberOfLettersInEnglishAlphabet)
 
 //: [Next](@next)
 

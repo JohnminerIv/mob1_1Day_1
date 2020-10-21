@@ -59,8 +59,8 @@ var humans = 10
  
  To check the type that Swift has inferred, hold down the "option" key on your keyboard while clicking on `pi` or `count` below:
  */
-let pi = 3.14
-var count = 5
+let pi: Double = 3.14
+var count: Int = 5
 /*:
  For more details on what we covered in this tutorial, please visit [Apple's type inference guide.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID322)
  */
@@ -69,7 +69,7 @@ var count = 5
  
  Sometimes, you'll have an `Int` that you want to convert to a `Double`. Or maybe you'll have a `Double` that you want to convert to an `Int`, to get rid of its fractional component. This process is called _type casting_. Here's how you can do it:
  */
-let three = Int(pi)
+let three: Int = Int(pi)
 /*:
  Note that __Swift will NOT automatically cast types for you!__ This is a nice feature, because it prevents you from accidentally casting a type when you didn't mean to.  A consequence of this is that Swift expects numerical operations to only be done on numbers with the same type. For example, you can multiply two `Int`s or you can multiply two `Float`s, but you cannot multiply an `Int` and a `Float`.
  */
@@ -105,14 +105,12 @@ let radians: Double = Double(angleInDegrees)  * pi / 180.0;
 
 
 // Write a definition for each variable followed by it's type (don't forget the colon!) below.
-
-
-
-
-
-
-
-
+var userName: String
+var passWord: String
+var shoeSize: Float
+var gender: Character
+var olderThan18: Bool
+var amountInParty: Int
 //: [Previous](@previous)    [Next](@next)
 
 

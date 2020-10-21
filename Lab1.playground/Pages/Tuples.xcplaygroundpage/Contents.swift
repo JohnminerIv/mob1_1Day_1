@@ -56,11 +56,15 @@ let yCoord = coordinate.y
 
 
 // Write your answers here:
-
+var startCord: (x: Double, y:Double) = (5.1, 8.3)
+var endCord: (x: Double, y:Double) = (375, 667)
 import Foundation // you need Foundation imported for the sqrt() function
+print(sqrt(pow((startCord.x - endCord.x), 2) + pow((endCord.y - startCord.y), 2)))
 
-
-
+var transferableFunds: (amount: Double, currency: String) = (1.00, "usd")
+var convertedFunds: (amount: Double, currency: String) = (transferableFunds.amount*1.29, "cad")
+var convertedFunds2: (amount: Double, currency: String) = (transferableFunds.amount*1.36, "aud")
+print(String(transferableFunds.amount) + " " + transferableFunds.currency + " is " + String(convertedFunds.amount) + " " + convertedFunds.currency + " and is " + String(convertedFunds2.amount) + " " + convertedFunds2.currency)
 
 
 

@@ -54,7 +54,7 @@ let res = someFunc(externalName: 40)
  - experiment:
  Try uncommenting the line below. What error do you get?
  */
-//let res2 = someFunc(40)
+// let res2 = someFunc(40) Missing argument label 'externalName'
 /*:
  Now, let's talk about why you would use external names. Look at the function below:
  */
@@ -75,6 +75,7 @@ func resize2(fromWidth width1: Int, fromHeight height1: Int, toWidth width2: Int
  Look at how much more readable the line below is! If a programmer comes back later on to this code, she knows exactly what is happening. She does not have to go to look at the definition of the function to figure out what is happening on this line. Everything is explained right there in one line. It is obvious that the code is resizing (something) from width 20 to width 100 and from height 30 to height 400. This is all thanks to the power of internal/external parameter names!
  */
 resize2(fromWidth: 20, fromHeight: 30, toWidth: 100, toHeight: 400)
+// Write your challenge code here:
 /*:
  ### Challenge
  
@@ -89,9 +90,22 @@ resize2(fromWidth: 20, fromHeight: 30, toWidth: 100, toHeight: 400)
     3. While this last function works for a rectangle. Imagine you have an irregular shaped floor plan. You could still calculate the perimeter by adding the length of each wall segment. Write a function that takes an array of `Int` and returns the total of all items in the array.
 
  */
-// Write your challenge code here:
-
-
+func areaOfARectangle(height: Int, width: Int) -> Int{
+    return height*width
+}
+print(areaOfARectangle(height: 5, width: 10))
+func perimeterOfARectangle(height: Int, width: Int) -> Int{
+    return (height*2) + (width*2)
+}
+print(perimeterOfARectangle(height: 5, width: 10))
+func perimeterOfIrregularShape(segments: Array<Int>) -> Int{
+    var perimeter: Int = 0
+    for segment in segments {
+        perimeter += segment
+    }
+    return perimeter
+}
+print(perimeterOfIrregularShape(segments: [1,2,3,4]))
 
 
 
